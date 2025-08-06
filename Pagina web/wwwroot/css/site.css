@@ -1,0 +1,283 @@
+﻿/ /* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --color-primario: #008080;
+    --color-secundario: #f4f7f6;
+    --color-texto: #333333;
+    --azul-corporativo: #2a4a75;
+    --blanco: #ffffff;
+}
+
+/* BODY GENERAL */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--blanco);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 80px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* NAVBAR PERSONALIZADO */
+.custom-navbar {
+    background: linear-gradient(to right, #2a4a75, #004466);
+    padding: 15px 0;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+    .custom-navbar .navbar-brand span {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 1000;
+    }
+
+    .custom-navbar .nav-link {
+        color: white;
+        margin-left: 25px;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+        .custom-navbar .nav-link:hover,
+        .custom-navbar .nav-link:focus {
+            color: white;
+        }
+
+/* HERO */
+.hero {
+    background-image: url('/img/oficina.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 30px;
+    margin: 0;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 60px 40px;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero .highlight {
+    color: var(--color-primario);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 1rem 0 2rem;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #006666;
+    }
+
+/* ENCABEZADOS */
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* SECCIÓN BENEFICIOS */
+.beneficios {
+    background-color: var(--color-secundario);
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.beneficios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.beneficio-item {
+    max-width: 250px;
+}
+
+    .beneficio-item i {
+        font-size: 40px;
+        color: var(--color-primario);
+        margin-bottom: 15px;
+    }
+
+/* QUIENES SOMOS */
+.quienes-somos {
+    padding: 80px 30px;
+    background-color: var(--blanco);
+}
+
+.quienes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.img-col img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.text-col {
+    flex: 1;
+}
+
+.link-sutil {
+    color: var(--color-primario);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    .link-sutil:hover {
+        text-decoration: underline;
+    }
+
+/* FORMULARIO */
+.formulario {
+    background-color: var(--color-secundario);
+    padding: 80px 30px;
+}
+
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.form-info {
+    flex: 1;
+}
+
+.form-box {
+    flex: 1;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+    .form-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-box input,
+    .form-box select {
+        padding: 12px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+.privacy {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--azul-corporativo);
+    color: white;
+    padding: 40px 30px 20px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+.footer-bar {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* ESPACIADO ENTRE SECCIONES */
+.section-space {
+    margin-top: 170px;
+    margin-bottom: 170px;
+}
+
+#sobre, #servicios, #contacto, #inicio {
+    scroll-margin-top: 160px;
+}
+
+.quienes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
