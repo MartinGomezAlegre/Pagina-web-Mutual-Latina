@@ -4,78 +4,86 @@
     ViewData["Title"] = "Mutual Latina";
 }
 
-<!-- SECCIÓN HERO -->
 <section class="hero" id="inicio">
-    <div class="hero-overlay">
-        <h1>Tu futuro y el de tu familia, <span class="highlight">protegidos</span></h1>
-        <p>Accedé a servicios de salud, ayuda económica y beneficios exclusivos. Somos la comunidad que te cuida.</p>
-        <a href="#servicios" class="btn btn-primary">Conocé Nuestros Servicios</a>
+    <div class="hero__overlay">
+        <h1 class="hero__title">Tu futuro y el de tu familia, <span class="hero__highlight">PROTEGIDOS</span></h1>
+        <p class="hero__subtitle">Accedé a servicios de salud, ayuda económica y beneficios exclusivos.
+Somos la comunidad que te cuida.</p>
+        <a href="#servicios" class="btn btn-primary hero__cta-button">Conocé Nuestros Servicios</a>
     </div>
 </section>
 
-<!-- SECCIÓN QUIÉNES SOMOS -->
-<<section class="quienes-somos section-space" id="sobre">
-    <div class="quienes-grid">
-        <div class="img-col" style="flex: 1; max-width: 400px;">
-            <img src="/img/ChatGPT Image Aug 5, 2025, 05_57_45 PM.png" alt="Directivos" class="foto-chica" style="width: 100%; border-radius: 10px;">
+<section class="about-us" id="sobre">
+    <div class="about-us__grid container">
+        <div class="about-us__image-wrapper">
+            <img src="/img/ChatGPT Image Aug 5, 2025, 05_57_45 PM.png" alt="Directivos de Mutual Latina" class="about-us__image">
         </div>
-        <div class="text-col" style="flex: 2;">
-            <h2>Más de 30 años creciendo junto a nuestra gente.</h2>
-            <p>Mutual Latina nació en 1992 con un objetivo claro: brindar protección y oportunidades basadas en la ayuda mutua. No somos una empresa, somos una asociación de personas para personas, donde cada socio es dueño y protagonista.</p>
-            <p>Nuestros valores de solidaridad, transparencia y compromiso guían cada decisión que tomamos para mejorar la calidad de vida de nuestra comunidad.</p>
-            <a href="/quienes-somos" class="link-sutil">Conocé más sobre nuestra historia →</a>
-        </div>
-    </div>
-</section>
-
-<!-- SECCIÓN BENEFICIOS / SERVICIOS -->
-<section class="beneficios section-space bg-light" id="servicios">
-    <h2 class="text-center">¿Por qué elegir Mutual Latina?</h2>
-    <div class="beneficios-grid">
-        <div class="beneficio-item">
-            <i class="fa-solid fa-heart-pulse fa-2x icono"></i>
-            <h3>Cobertura Médica </h3>
-            <p>Atención médica completa para vos y tu familia.</p>
-        </div>
-        <div class="beneficio-item">
-            <i class="fa-solid fa-hand-holding-dollar fa-2x icono"></i>
-            <h3>Ayuda Económica</h3>
-            <p>Créditos accesibles y soluciones financieras solidarias.</p>
-        </div>
-        <div class="beneficio-item">
-            <i class="fa-solid fa-umbrella-beach fa-2x icono"></i>
-            <h3>Turismo Social</h3>
-            <p>Vacaciones y actividades recreativas para todos.</p>
+        <div class="about-us__text-content">
+         
+   <h2 class="about-us__title">Más de 30 años creciendo junto a nuestra gente.</h2>
+            <p class="about-us__paragraph">Mutual Latina nació en 1992 con un objetivo claro: brindar protección y oportunidades basadas en la ayuda mutua.
+No somos una empresa, somos una asociación de personas para personas, donde cada socio es dueño y protagonista.</p>
+            <p class="about-us__paragraph">Nuestros valores de solidaridad, transparencia y compromiso guían cada decisión que tomamos para mejorar la calidad de vida de nuestra comunidad.</p>
+            <a href="/quienes-somos" class="about-us__link">Conocé más sobre nuestra historia →</a>
         </div>
     </div>
 </section>
 
-<!-- SECCIÓN FORMULARIO -->
-<section class="formulario section-space" id="contacto">
-    <div class="form-grid">
-        <div class="form-info">
-            <h2>¡Da el primer paso hacia tu bienestar!</h2>
-            <p>Dejanos tus datos y un asesor se comunicará con vos para contarte, sin compromiso, cuál es el plan perfecto para vos y tu familia.</p>
-            <ul>
-                <li><i class="fa-solid fa-check-circle text-success"></i> Asesoramiento 100% personalizado</li>
-                <li><i class="fa-solid fa-check-circle text-success"></i> Sin costo ni obligación de compra</li>
-                <li><i class="fa-solid fa-check-circle text-success"></i> Recibí una bonificación especial al asociarte</li>
+<section class="features" id="servicios">
+    <div class="container">
+        <h2 class="features__main-title">¿Por qué elegir Mutual Latina?</h2>
+  
+  <div class="features__grid">
+            <div class="features__item">
+                <i class="fa-solid fa-heart-pulse features__icon"></i>
+                <h3 class="features__item-title">Cobertura Médica</h3>
+                <p class="features__item-description">Atención médica completa para vos y tu familia.</p>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-hand-holding-dollar features__icon"></i>
+      
+      <h3 class="features__item-title">Ayuda Económica</h3>
+                <p class="features__item-description">Créditos accesibles y soluciones financieras solidarias.</p>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-umbrella-beach features__icon"></i>
+                <h3 class="features__item-title">Turismo Social</h3>
+                <p class="features__item-description">Vacaciones y actividades recreativas para todos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contacto">
+    <div class="contact-section__grid container">
+        <div class="contact-section__info">
+            <h2 class="contact-section__title">¡Da el primer paso hacia tu bienestar!</h2>
+            <p class="contact-section__description">Dejanos tus datos y un asesor se comunicará con vos para contarte, sin compromiso, cuál es el plan perfecto para vos y tu familia.</p>
+            <ul class="contact-section__checklist">
+                
+<li class="contact-section__check-item"><i class="fa-solid fa-check-circle"></i> Asesoramiento 100% personalizado</li>
+                <li class="contact-section__check-item"><i class="fa-solid fa-check-circle"></i> Sin costo ni obligación de compra</li>
+                <li class="contact-section__check-item"><i class="fa-solid fa-check-circle"></i> Recibí una bonificación especial al asociarte</li>
             </ul>
         </div>
-        <div class="form-box">
-            <form method="post">
-                <input type="text" placeholder="Nombre y Apellido" required>
-                <input type="email" placeholder="Correo Electrónico" required>
-                <input type="tel" placeholder="Número de WhatsApp" required>
-                <select>
-                    <option disabled selected>¿Qué servicio te interesa más?</option>
-                    <option>Salud</option>
-                    <option>Ayuda Económica</option>
-                    <option>Turismo</option>
-                    <option>Todos</option>
+        <div class="contact-section__form-wrapper">
+            <form method="post" class="contact-form">
+  
+              <input type="text" class="contact-form__input" placeholder="Nombre y Apellido" required>
+                <input type="email" class="contact-form__input" placeholder="Correo Electrónico" required>
+                <input type="tel" class="contact-form__input" placeholder="Número de WhatsApp" required>
+                <select class="contact-form__select" required>
+                    <option value="" disabled selected>¿Qué servicio 
+te interesa más?</option>
+                    <option value="salud">Salud</option>
+                    <option value="ayuda-economica">Ayuda Económica</option>
+                    <option value="turismo">Turismo</option>
+                    <option value="todos">Todos</option>
                 </select>
-                <button type="submit" class="btn btn-primary">QUIERO MI ASESORAMIENTO GRATUITO</button>
-                <small class="privacy">Tus datos están protegidos. No compartiremos tu información.</small>
+ 
+               <button type="submit" class="btn btn-primary contact-form__submit">QUIERO MI ASESORAMIENTO GRATUITO</button>
+                <small class="contact-form__privacy-note">Tus datos están protegidos.
+No compartiremos tu información.</small>
             </form>
         </div>
     </div>

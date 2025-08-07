@@ -1,283 +1,316 @@
-﻿/ /* RESET GENERAL */
+﻿/* ==========================================================================
+   1. CONFIGURACIÓN GLOBAL (RESET, VARIABLES, BODY)
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIABLES */
 :root {
-    --color-primario: #008080;
-    --color-secundario: #f4f7f6;
-    --color-texto: #333333;
-    --azul-corporativo: #2a4a75;
-    --blanco: #ffffff;
+    --color-primary: #008080;
+    --color-secondary-bg: #f4f7f6;
+    --color-text: #333333;
+    --color-brand-blue: #2a4a75;
+    --color-white: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
 }
 
-/* BODY GENERAL */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-texto);
-    background-color: var(--blanco);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-white);
     line-height: 1.6;
     scroll-behavior: smooth;
-    padding-top: 80px;
-    width: 100vw;
-    overflow-x: hidden;
 }
 
-/* NAVBAR PERSONALIZADO */
-.custom-navbar {
-    background: linear-gradient(to right, #2a4a75, #004466);
-    padding: 15px 0;
+/* ==========================================================================
+   2. COMPONENTES DE LAYOUT (NAV, FOOTER)
+   ========================================================================== */
+
+/* --- Bloque: Main Nav --- */
+.main-nav {
+    background-color: #243C64;
+    padding: 15px 0; /* Bootstrap maneja el padding del container */
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-    .custom-navbar .navbar-brand span {
-        color: white;
-        font-size: 1.3rem;
-        font-weight: 1000;
+.main-nav__brand-text {
+    color: var(--color-white);
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+.main-nav__logo {
+    height: 60px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.main-nav__link {
+    color: var(--color-white) !important; /* !important para sobreescribir Bootstrap */
+    margin-left: 25px;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+    .main-nav__link:hover,
+    .main-nav__link:focus {
+        opacity: 0.8;
     }
 
-    .custom-navbar .nav-link {
-        color: white;
-        margin-left: 25px;
-        font-size: 1rem;
-        transition: color 0.3s ease;
+
+/* --- Bloque: Main Footer --- */
+.main-footer {
+    background-color: var(--color-brand-blue);
+    color: var(--color-white);
+    padding: 20px 0;
+    margin-top: 80px; /* Espacio antes del footer */
+    font-size: 0.9rem;
+}
+
+.main-footer__link {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+    .main-footer__link:hover {
+        text-decoration: underline;
     }
 
-        .custom-navbar .nav-link:hover,
-        .custom-navbar .nav-link:focus {
-            color: white;
-        }
+/* ==========================================================================
+   3. COMPONENTES DE PÁGINA (BLOQUES DE INDEX.CSHTML)
+   ========================================================================== */
 
-/* HERO */
+/* --- Bloque: Hero --- */
 .hero {
-    background-image: url('/img/oficina.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    background: url('/img/oficina.png') center/cover no-repeat;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-white);
     text-align: center;
-    padding: 0 30px;
-    margin: 0;
+    padding: 0 20px;
 }
 
-.hero-overlay {
+.hero__overlay {
     background-color: rgba(0, 0, 0, 0.55);
-    padding: 60px 40px;
+    padding: 50px 30px;
     border-radius: 12px;
-    max-width: 900px;
-    width: 100%;
+    max-width: 800px;
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero__title {
+    font-size: 2.8rem;
     font-weight: 800;
 }
 
-.hero .highlight {
-    color: var(--color-primario);
+.hero__highlight {
+    color: var(--color-primary);
 }
 
-.hero p {
-    font-size: 1.25rem;
+.hero__subtitle {
+    font-size: 1.2rem;
     margin: 1rem 0 2rem;
 }
 
-/* BOTONES */
+.hero__cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+}
+
+/* --- Bloque: About Us --- */
+.about-us {
+    padding: 80px 0;
+}
+
+.about-us__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-us__image-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-us__image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-us__text-content {
+    flex: 2;
+}
+
+.about-us__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.about-us__link {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+    .about-us__link:hover {
+        text-decoration: underline;
+    }
+
+/* --- Bloque: Features --- */
+.features {
+    padding: 80px 0;
+    background-color: var(--color-secondary-bg);
+}
+
+.features__main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.features__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.features__item {
+    text-align: center;
+    max-width: 280px;
+}
+
+.features__icon {
+    font-size: 40px;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.features__item-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* --- Bloque: Contact Section y Form --- */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-section__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-section__info {
+    flex: 1;
+}
+
+.contact-section__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-section__checklist {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.contact-section__check-item {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #007bff; /* Usando un color de Bootstrap para el ícono */
+}
+
+.contact-section__form-wrapper {
+    flex: 1;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form__input,
+.contact-form__select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font-primary);
+}
+
+.contact-form__submit {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .contact-form__submit:hover {
+        background-color: #006666;
+    }
+
+.contact-form__privacy-note {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   4. CLASES DE UTILIDAD
+   ========================================================================== */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 25px;
     font-size: 1rem;
     text-align: center;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .btn-primary {
-    background-color: var(--color-primario);
-    color: var(--blanco);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     border: none;
 }
 
     .btn-primary:hover {
         background-color: #006666;
+        color: var(--color-white);
     }
 
-/* ENCABEZADOS */
-h1, h2, h3 {
-    margin-top: 0;
-    font-weight: 700;
+/* Scroll margin para anclas */
+#inicio, #sobre, #servicios, #contacto {
+    scroll-margin-top: 80px; /* Ajustar a la altura del navbar */
 }
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-/* SECCIÓN BENEFICIOS */
-.beneficios {
-    background-color: var(--color-secundario);
-    padding: 80px 30px;
-    text-align: center;
-}
-
-.beneficios-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.beneficio-item {
-    max-width: 250px;
-}
-
-    .beneficio-item i {
-        font-size: 40px;
-        color: var(--color-primario);
-        margin-bottom: 15px;
-    }
-
-/* QUIENES SOMOS */
-.quienes-somos {
-    padding: 80px 30px;
-    background-color: var(--blanco);
-}
-
-.quienes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-}
-
-.img-col img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.text-col {
-    flex: 1;
-}
-
-.link-sutil {
-    color: var(--color-primario);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-    .link-sutil:hover {
-        text-decoration: underline;
-    }
-
-/* FORMULARIO */
-.formulario {
-    background-color: var(--color-secundario);
-    padding: 80px 30px;
-}
-
-.form-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.form-info {
-    flex: 1;
-}
-
-.form-box {
-    flex: 1;
-    background-color: var(--blanco);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-    .form-box form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .form-box input,
-    .form-box select {
-        padding: 12px;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-    }
-
-.privacy {
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* FOOTER */
-.footer {
-    background-color: var(--azul-corporativo);
-    color: white;
-    padding: 40px 30px 20px;
-}
-
-.footer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-.footer-bar {
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    margin-top: 20px;
-    padding-top: 10px;
-    font-size: 0.9rem;
-}
-
-/* ESPACIADO ENTRE SECCIONES */
-.section-space {
-    margin-top: 170px;
-    margin-bottom: 170px;
-}
-
-#sobre, #servicios, #contacto, #inicio {
-    scroll-margin-top: 160px;
-}
-
-.quienes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
